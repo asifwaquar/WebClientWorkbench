@@ -1,0 +1,72 @@
+﻿@model IEnumerable<IQC_WebClient_Workbench.Models.Application>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DisplayName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedByUserId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedDtTm)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Enabled)
+                </th>
+          
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisplayName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedByUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDtTm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enabled)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<hr />
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="Workflows" method="GET">
+            <input type="submit" value="Get Workflows" />
+        </form>
+    </div>
+
+</div>

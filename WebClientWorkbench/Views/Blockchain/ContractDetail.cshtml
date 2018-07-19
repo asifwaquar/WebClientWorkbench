@@ -1,0 +1,60 @@
+﻿@model IQC_WebClient_Workbench.Models.Contract
+
+@{
+    ViewData["Title"] = "ContractDetail";
+}
+
+<h2>ContractDetail</h2>
+
+<div>
+    <h4>Contract</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProvisioningStatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProvisioningStatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConnectionId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConnectionId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LedgerIdentifier)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LedgerIdentifier)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeployedByUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeployedByUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkflowId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorkflowId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractCodeId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractCodeId)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List of Applications</a>
+</div>

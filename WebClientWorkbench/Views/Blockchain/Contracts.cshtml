@@ -1,0 +1,74 @@
+﻿@model IEnumerable<IQC_WebClient_Workbench.Models.Contract>
+
+@{
+    ViewData["Title"] = "Contracts";
+}
+
+<h2>Contracts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProvisioningStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ConnectionId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LedgerIdentifier)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeployedByUserId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WorkflowId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContractCodeId)
+                </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProvisioningStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConnectionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LedgerIdentifier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeployedByUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkflowId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractCodeId)
+            </td>
+
+        </tr>
+}
+    </tbody>
+</table>
+<hr />
+
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="NewContract" method="GET">
+            <input type="submit" value="Create new contract" />
+        </form>
+    </div>
+
+</div>
+ 
